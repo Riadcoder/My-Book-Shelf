@@ -23,7 +23,7 @@ const Home = () => {
         e.preventDefault()
 
         try {
-            await axios.post("https://bookshelf-manager-02.vercel.app/add-book", { title, author })
+            await axios.post("https://bookshelf-manager-02.vercel.app/add-book", { title, Lekhok })
             toast.success("Congrats,Books added successfully")
             setTitle("")
             setAuthor("")
@@ -83,14 +83,14 @@ const Home = () => {
                     </div>
 
                     <div className="space-y-2">
-                        <label htmlFor="Kobi" className="text-sm font-medium text-slate-700">Author</label>
+                        <label htmlFor="Lekhok" className="text-sm font-medium text-slate-700">Author</label>
                         <input
-                            id="Kobi"
+                            id="Lekhok"
                             type="text"
-                            placeholder="Enter Kobi name"
-                            name="Kobi"
+                            placeholder="Enter Lekhok name"
+                            name="Lekhok"
                             className="w-full max-w-md border border-slate-300 rounded-xl p-3 outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition"
-                            value={Kobi}
+                            value={Lekhok}
                             onChange={e => setAuthor(e.target.value)}
                         />
                     </div>
