@@ -83,11 +83,11 @@ const Home = () => {
                     </div>
 
                     <div className="space-y-2">
-                        <label htmlFor="author" className="text-sm font-medium text-slate-700">Author</label>
+                        <label htmlFor="Kobi" className="text-sm font-medium text-slate-700">Author</label>
                         <input
                             id="author"
                             type="text"
-                            placeholder="Enter author name"
+                            placeholder="Enter Kobi name"
                             name="author"
                             className="w-full max-w-md border border-slate-300 rounded-xl p-3 outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition"
                             value={author}
