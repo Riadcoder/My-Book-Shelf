@@ -24,7 +24,7 @@ const Home = () => {
 
         try {
             await axios.post("https://bookshelf-manager-02.vercel.app/add-book", { title, author })
-            toast.success("Books added successfully")
+            toast.success("Congrats,Books added successfully")
             setTitle("")
             setAuthor("")
             await fetchBooks()
@@ -50,7 +50,7 @@ const Home = () => {
 
         try {
             await axios.delete(`https://bookshelf-manager-02.vercel.app/books/${bookId}`)
-            toast.success("Book deleted successfully")
+            toast.success("Yes,Book deleted successfully")
             await fetchBooks()
         } catch (error) {
             toast.error(`Could not delete book. ${getErrorMessage(error)}`)
