@@ -85,12 +85,12 @@ const Home = () => {
                     <div className="space-y-2">
                         <label htmlFor="Kobi" className="text-sm font-medium text-slate-700">Author</label>
                         <input
-                            id="author"
+                            id="Kobi"
                             type="text"
                             placeholder="Enter Kobi name"
-                            name="author"
+                            name="Kobi"
                             className="w-full max-w-md border border-slate-300 rounded-xl p-3 outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition"
-                            value={author}
+                            value={Kobi}
                             onChange={e => setAuthor(e.target.value)}
                         />
                     </div>
