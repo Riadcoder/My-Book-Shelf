@@ -23,7 +23,7 @@ const Home = () => {
         e.preventDefault()
 
         try {
-            await axios.post("https://bookshelf-manager-02.vercel.app/add-book", { title, Lekhok })
+            await axios.post("https://bookshelf-manager-02.vercel.app/add-book", { title, author })
             toast.success("Congrats,Books added successfully")
             setTitle("")
             setAuthor("")
