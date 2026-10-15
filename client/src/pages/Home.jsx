@@ -60,7 +60,7 @@ const Home = () => {
     useEffect(() => {
         axios.get("https://bookshelf-manager-02.vercel.app/all-books")
             .then((response) => setAllBooks(response.data.data || []))
-            .catch((error) => toast.error(`Could not load books. ${getErrorMessage(error)}`))
+            .catch((error) => toast.error(`sorry,Could not load books. ${getErrorMessage(error)}`))
     }, [])
 
     return (
