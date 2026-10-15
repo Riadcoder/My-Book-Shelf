@@ -97,7 +97,7 @@ const Home = () => {
 
                     <button
                         type="submit"
-                        className="w-full max-w-md rounded-xl bg-emerald-500 px-4 py-3 text-sm font-semibold text-yellow shadow-sm transition hover:bg-emerald-600 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                        className="w-full max-w-md rounded-xl bg-emerald-500 px-4 py-3 text-sm font-semibold text-red shadow-sm transition hover:bg-emerald-600 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
                     >
                         Add A Book
                     </button>
