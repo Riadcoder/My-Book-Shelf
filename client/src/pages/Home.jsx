@@ -24,7 +24,7 @@ const Home = () => {
 
         try {
             await axios.post("https://bookshelf-manager-02.vercel.app/add-book", { title, author })
-            toast.success("Congrats,Books added successfully")
+            toast.success("Books added successfully")
             setTitle("")
             setAuthor("")
             await fetchBooks()
@@ -50,7 +50,7 @@ const Home = () => {
 
         try {
             await axios.delete(`https://bookshelf-manager-02.vercel.app/books/${bookId}`)
-            toast.success("Yes,Book deleted successfully")
+            toast.success("Book deleted successfully")
             await fetchBooks()
         } catch (error) {
             toast.error(`Could not delete book. ${getErrorMessage(error)}`)
@@ -60,7 +60,7 @@ const Home = () => {
     useEffect(() => {
         axios.get("https://bookshelf-manager-02.vercel.app/all-books")
             .then((response) => setAllBooks(response.data.data || []))
-            .catch((error) => toast.error(`sorry,Could not load books. ${getErrorMessage(error)}`))
+            .catch((error) => toast.error(`Could not load books. ${getErrorMessage(error)}`))
     }, [])
 
     return (
@@ -83,23 +83,23 @@ const Home = () => {
                     </div>
 
                     <div className="space-y-2">
-                        <label htmlFor="Lekhok" className="text-sm font-medium text-slate-700">Author</label>
+                        <label htmlFor="author" className="text-sm font-medium text-slate-700">Author</label>
                         <input
-                            id="Lekhok"
+                            id="author"
                             type="text"
-                            placeholder="Enter Lekhok name"
-                            name="Lekhok"
+                            placeholder="Enter author name"
+                            name="author"
                             className="w-full max-w-md border border-slate-300 rounded-xl p-3 outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition"
-                            value={Lekhok}
+                            value={author}
                             onChange={e => setAuthor(e.target.value)}
                         />
                     </div>
 
                     <button
                         type="submit"
-                        className="w-full max-w-md rounded-xl bg-emerald-500 px-4 py-3 text-sm font-semibold text-red shadow-sm transition hover:bg-emerald-600 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                        className="w-full max-w-md rounded-xl bg-emerald-500 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-600 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
                     >
-                        Add A Book
+                        Add Book
                     </button>
                 </form>
             </div>
